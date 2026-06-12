@@ -1,6 +1,7 @@
 import FadeInView from "@/components/multi-storey-steel-building-mekark/FadeInView";
 import EnquiryForm from "@/components/multi-storey-steel-building-mekark/EnquiryForm";
 
+const mekarkContact = { phoneHref: "tel:+919790924754", phoneLabel: "+91 97909 24754", emailHref: "mailto:info@mekark.com", emailLabel: "info@mekark.com", whatsappUrl: "https://wa.me/919790924754", websiteUrl: "https://www.mekark.com" };
 
 const TRUST_POINTS = [
   {
