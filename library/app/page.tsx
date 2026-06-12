@@ -313,8 +313,9 @@ export default function LibraryPage() {
                       style={{
                         width: "100%", textAlign: "left", padding: "7px 16px",
                         background: isSelected ? "rgba(196,22,28,0.15)" : "transparent",
+                        borderTop: "none", borderRight: "none", borderBottom: "none",
                         borderLeft: `2px solid ${isSelected ? "#C4161C" : "transparent"}`,
-                        border: "none", cursor: "pointer",
+                        cursor: "pointer",
                         display: "flex", alignItems: "center", gap: 8,
                         transition: "all 100ms ease",
                       }}
