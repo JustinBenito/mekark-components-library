@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "NODE_OPTIONS='--localstorage-file=/tmp/mekark-ls.json' next dev",
+    "build": "NODE_OPTIONS='--localstorage-file=/tmp/mekark-ls.json' next build",
+    "start": "NODE_OPTIONS='--localstorage-file=/tmp/mekark-ls.json' next start"
   },
   "dependencies": {
-    "next": "15.3.3",
+    "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "motion": "^11.0.0"
