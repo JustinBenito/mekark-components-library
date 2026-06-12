@@ -1,21 +1,38 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ComponentType } from "react";
+import { getComponentLoader } from "@/lib/registry";
 
 export default function PreviewRenderer({ repo, component }: { repo: string; component: string }) {
-  const [Comp, setComp] = useState<React.ComponentType | null>(null);
-  const [err, setErr] = useState(false);
+  const [Comp, setComp] = useState<ComponentType | null>(null);
+  const [status, setStatus] = useState<"loading" | "error" | "ok">("loading");
 
   useEffect(() => {
-    import(`@/components/${repo}/${component}`)
-      .then((m) => setComp(() => m.default ?? null))
-      .catch(() => setErr(true));
+    const loader = getComponentLoader(repo, component);
+    if (!loader) {
+      setStatus("error");
+      return;
+    }
+    loader()
+      .then((m) => {
+        if (m.default) {
+          setComp(() => m.default);
+          setStatus("ok");
+        } else {
+          setStatus("error");
+        }
+      })
+      .catch(() => setStatus("error"));
   }, [repo, component]);
 
-  if (err) return (
-    <div style={{ padding: 40, fontFamily: "monospace", color: "#ef4444" }}>
-      Component not found: {repo}/{component}
+  if (status === "error") return (
+    <div style={{ padding: 40, fontFamily: "monospace", color: "#ef4444", fontSize: 14 }}>
+      Component not found: <strong>{repo}/{component}</strong>
     </div>
   );
-  if (!Comp) return null;
+  if (status === "loading" || !Comp) return (
+    <div style={{ padding: 40, fontFamily: "monospace", color: "#9ca3af", fontSize: 13 }}>
+      Loading…
+    </div>
+  );
   return <Comp />;
 }
