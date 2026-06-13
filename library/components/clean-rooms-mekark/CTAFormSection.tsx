@@ -364,3 +364,5 @@ export function CTAFormSection() {
     </section>
   );
 }
+
+export default CTAFormSection;

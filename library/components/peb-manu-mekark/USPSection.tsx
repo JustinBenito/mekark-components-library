@@ -120,3 +120,5 @@ export function USPSection() {
     </section>
   );
 }
+
+export default USPSection;

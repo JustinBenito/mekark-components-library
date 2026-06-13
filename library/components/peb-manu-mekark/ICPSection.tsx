@@ -187,3 +187,5 @@ export function ICPSection() {
     </section>
   );
 }
+
+export default ICPSection;

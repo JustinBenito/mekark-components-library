@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/api/source/[repo]/[component]": ["./components/**/*.tsx"],
+  },
   images: {
     remotePatterns: [
       {

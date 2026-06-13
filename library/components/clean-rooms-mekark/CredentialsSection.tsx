@@ -47,3 +47,5 @@ export function CredentialsSection() {
     </section>
   );
 }
+
+export default CredentialsSection;

@@ -118,3 +118,5 @@ export function WhatIsCleanRoom() {
     </section>
   );
 }
+
+export default WhatIsCleanRoom;

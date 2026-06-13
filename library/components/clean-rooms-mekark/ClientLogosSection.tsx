@@ -78,3 +78,5 @@ export function ClientLogosSection() {
     </section>
   );
 }
+
+export default ClientLogosSection;

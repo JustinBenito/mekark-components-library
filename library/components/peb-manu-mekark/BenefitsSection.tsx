@@ -142,3 +142,5 @@ export function BenefitsSection() {
     </section>
   );
 }
+
+export default BenefitsSection;

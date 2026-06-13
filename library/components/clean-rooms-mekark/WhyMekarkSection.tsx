@@ -74,3 +74,5 @@ export function WhyMekarkSection() {
     </section>
   );
 }
+
+export default WhyMekarkSection;

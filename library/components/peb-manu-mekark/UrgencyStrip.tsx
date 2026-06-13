@@ -53,3 +53,5 @@ export function UrgencyStrip() {
     </section>
   );
 }
+
+export default UrgencyStrip;

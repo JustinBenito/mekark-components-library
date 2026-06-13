@@ -113,3 +113,5 @@ export function ProjectApproach() {
     </section>
   );
 }
+
+export default ProjectApproach;

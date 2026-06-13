@@ -67,3 +67,5 @@ export function ProjectsSection() {
     </section>
   );
 }
+
+export default ProjectsSection;

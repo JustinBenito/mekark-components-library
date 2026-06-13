@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS='--localstorage-file=/tmp/mekark-ls.json' next dev",
-    "build": "NODE_OPTIONS='--localstorage-file=/tmp/mekark-ls.json' next build",
-    "start": "NODE_OPTIONS='--localstorage-file=/tmp/mekark-ls.json' next start"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "next": "15.1.7",
